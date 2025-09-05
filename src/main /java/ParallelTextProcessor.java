@@ -18,7 +18,7 @@ public class ParallelTextProcessor {
         }
 
         for (Thread thread : threads) {
-            thread.join();
+            thread.join(); // зависаем, ждём когда поток объект которого лежит в thread завершится
         }
         
         long endTs = System.currentTimeMillis(); // end time
